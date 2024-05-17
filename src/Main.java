@@ -7,8 +7,20 @@ public class Main {
         Scanner input = new Scanner(System.in);
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
+        while(true) {
         System.out.println("Hello , Enter a CC num");
-        System.out.println( Credit.findDigits( input.nextLong()) + "digits");
+        long cc=input.nextLong();
+        //check 16, 15 or 13
+            if ( Credit.findDigits(cc)==16  ){
+                //check for visa
+                if(Credit.getDigit(cc, 16 )==4){
+                    System.out.println("TYPE VISA");
+                    break;
+                }
+            }
+
+
+        }
 
 
     }

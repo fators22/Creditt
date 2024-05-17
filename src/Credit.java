@@ -17,14 +17,14 @@ public class Credit {
         while( num>0){
 
             int digit=(int)num%10;
-            count++;
-            if(count==index){
+            result++;
+            if(result==index){
                 return digit;
             }
             num=num/10;
 
         }
 
-        return result;
+        return -1;
     }
 }
